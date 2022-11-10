@@ -1,7 +1,12 @@
 package pt.ipt.dam2022.api.model
 
+import com.google.gson.annotations.SerializedName
+
 /**
- * class to represente the data structure,
+ * class to represent the data structure,
  * obtained from API
  */
-class Note(val title: String, val description: String)
+class Note(
+        @SerializedName("title") val title: String,
+        @SerializedName("description") val description: String
+)
