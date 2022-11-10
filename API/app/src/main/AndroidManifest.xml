@@ -6,6 +6,12 @@
    <uses-permission android:name="android.permission.INTERNET" />
    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
+   <!--
+      if you want to access to an API in 'http'
+      you must specify, on <application
+      the key
+         android:usesCleartextTraffic="true"
+   -->
    <application
       android:allowBackup="true"
       android:dataExtractionRules="@xml/data_extraction_rules"

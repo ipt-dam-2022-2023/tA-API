@@ -1,4 +1,4 @@
-package pt.ipt.dam2022.api.Model
+package pt.ipt.dam2022.api.model
 
 /**
  * class to represente the data structure,

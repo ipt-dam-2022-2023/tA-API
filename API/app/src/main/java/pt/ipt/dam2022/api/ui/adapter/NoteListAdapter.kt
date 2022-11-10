@@ -2,7 +2,7 @@ package pt.ipt.dam2022.api.ui.adapter
 
 import android.content.Context
 import androidx.recyclerview.widget.RecyclerView
-import pt.ipt.dam2022.api.Model.Note
+import pt.ipt.dam2022.api.model.Note
 
 class NoteListAdapter (
         private val notes:List<Note>,
@@ -11,8 +11,8 @@ class NoteListAdapter (
 
         // TODO: add some code to format the 'fragments'
 
-//        class ViewHolder() {
-//        }
+        class ViewHolder() {
+        }
 
 
 }
