@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
 
         // ask retrofit to read the API data
         val call = RetrofitInitializer().noteService().list()
-        // use data readed
+        // use data read
         call.enqueue(object : Callback<List<Note>?> {
             override fun onResponse(
                     call: Call<List<Note>?>?, response: Response<List<Note>?>?
@@ -53,7 +53,6 @@ class MainActivity : AppCompatActivity() {
         )
 
         recyclerView.layoutManager=layoutManager
-
     }
 }
 
