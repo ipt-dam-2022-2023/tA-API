@@ -1,5 +1,7 @@
 package pt.ipt.dam2022.api.retrofit
 
+import com.google.gson.Gson
+import com.google.gson.GsonBuilder
 import pt.ipt.dam2022.api.retrofit.service.NoteService
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -9,10 +11,16 @@ import retrofit2.converter.gson.GsonConverterFactory
  * we must specify the URL
  */
 class RetrofitInitializer {
-    private val retrofit = Retrofit.Builder()
-        .baseUrl("https://adamastor.ipt.pt/DAM-API/")  // "http://10.0.2.2/"  --->  referente to an API that is on localhost
-        .addConverterFactory(GsonConverterFactory.create())
-        .build()
+
+    private val host = "https://adamastor.ipt.pt/DAM-API/"
+
+    // set the data readed from API to be used from Retrofit
+    private val gson: Gson = GsonBuilder().setLenient().create()
+
+    private val retrofit =
+        Retrofit.Builder()
+                .baseUrl(host)
+                .addConverterFactory(GsonConverterFactory.create(gson)).build()
 
     fun noteService() = retrofit.create(NoteService::class.java)
 
